@@ -1,3 +1,70 @@
+
 body {
-  background: blanchedalmond;
+  margin: 0;
+}  
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EDEDED;
+  flex-wrap: wrap;
+}
+
+.a {
+  width: 100%;
+  height: calc(40vh - 45px); /* -45 because thats how much margin we have on the y axis*/
+  margin: 15px;
+  margin-bottom: 0px;
+  border: 1px solid black;
+  background-color: #D8D8D8;
+}
+
+.b {
+  flex: 3;
+  height: 60vh;
+  margin: 15px;
+  border: 1px solid black;
+  background-color: #D8D8D8;
+}
+
+.c {
+  flex: 1;
+  height: 60vh;
+  margin: 15px;
+  margin-left: 0px;
+  border: 1px solid black;
+  background-color: #D8D8D8;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .a {
+    width: auto;
+    flex: 1;
+    margin: 15px;
+    margin-bottom: 0px;
+    background-color: #D8D8D8;
+    border: 1px solid black;
+  }
+  
+  .b {
+    flex: 3;
+    margin: 15px;
+    margin-bottom: 0px;
+    background-color: #D8D8D8;
+    border: 1px solid black;
+  }
+  
+  .c {
+    flex: 1;
+    margin: 15px;
+    background-color: #D8D8D8;
+    border: 1px solid black;
+  }
 }
